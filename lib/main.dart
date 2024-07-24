@@ -10,6 +10,7 @@ import 'package:coworker_mobile/pages/get_started_page.dart';
 import 'package:coworker_mobile/pages/sign_in_page.dart';
 import 'package:coworker_mobile/pages/sign_up_page.dart';
 import 'package:coworker_mobile/pages/success_booking_page.dart';
+import 'package:coworker_mobile/pages/team_members.dart';
 import 'package:d_view/d_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -93,6 +94,7 @@ class MyApp extends StatelessWidget {
         AppRoute.checkout.name: (context) => const CheckoutPage(),
         AppRoute.successBooking.name: (context) => const SuccessBookingPage(),
         // AppRoute.editAccount.name: (context) => EditAccountPage(),
+        AppRoute.teamMembers.name: (context) => TeamMembersPage(),
       },
     );
   }

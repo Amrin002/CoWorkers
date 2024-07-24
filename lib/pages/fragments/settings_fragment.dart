@@ -135,7 +135,9 @@ class _SettingsFragmentState extends State<SettingsFragment> {
           Navigator.pushNamed(context, AppRoute.editAccount.name);
         }), // Tambahkan onTap untuk navigasi
         itemDivider(),
-        itemSetting('assets/ic_invoice.png', 'Invoices'),
+        itemSetting('assets/ic_invoice.png', 'Our Team' ,  onTap: () {
+          Navigator.pushNamed(context, AppRoute.teamMembers.name);
+        }), //buatkan saya halaman untuk daftar anggota tim
         itemDivider(),
 
         itemSetting('assets/ic_rate_app.png', 'Rate App'),

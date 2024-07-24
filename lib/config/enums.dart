@@ -10,4 +10,5 @@ enum AppRoute{
   successBooking,
   userprofile,
   editAccount,
+  teamMembers,
 }
