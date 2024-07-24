@@ -1,4 +1,4 @@
-import 'package:coworker_mobile/cotrollers/user_controllers.dart';
+import 'package:coworker_mobile/controllers/user_controllers.dart';
 import 'package:coworker_mobile/models/user_model.dart';
 import 'package:d_session/d_session.dart';
 import 'package:get/get.dart';
@@ -15,11 +15,10 @@ class AppSession {
     return success;
   }
 
-
-  static Future<Map?> getUser() async{
+  static Future<Map?> getUser() async {
     Map? mapUser = await DSession.getUser();
 
-    if(mapUser!=null){
+    if (mapUser != null) {
       final userController = Get.put(UserController());
       userController.data = UserModel.fromJson(Map.from(mapUser));
     }
@@ -27,13 +26,14 @@ class AppSession {
     return mapUser;
   }
 
-  static Future<bool> removeUser(Map user) async{
+  static Future<bool> removeUser() async {
     bool success = await DSession.removeUser();
 
-    if(success){
+    if (success) {
       final userController = Get.put(UserController());
       userController.data = UserModel();
     }
+
     return success;
   }
 }

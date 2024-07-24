@@ -1,24 +1,23 @@
 import 'package:coworker_mobile/config/enums.dart';
-import 'package:coworker_mobile/cotrollers/sign_in_controller.dart';
-import 'package:coworker_mobile/cotrollers/sign_up_controller.dart';
+import 'package:coworker_mobile/controllers/sign_in_controller.dart';
 import 'package:coworker_mobile/widget/input_auth.dart';
 import 'package:coworker_mobile/widget/input_auth_password.dart';
 import 'package:coworker_mobile/widget/secondary_button.dart';
 import 'package:d_view/d_view.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 
-class SigninPage extends StatefulWidget {
-  const SigninPage({super.key});
+import 'package:flutter/material.dart';
+
+import 'package:get/get.dart';
+
+
+class SignInPage extends StatefulWidget {
+  const SignInPage({super.key});
 
   @override
-  State<SigninPage> createState() => _SigninPageState();
+  State<SignInPage> createState() => _SignInPageState();
 }
 
-class _SigninPageState extends State<SigninPage> {
+class _SignInPageState extends State<SignInPage> {
   final signInController = Get.put(SignInController());
   @override
   void dispose(){
@@ -26,6 +25,7 @@ class _SigninPageState extends State<SigninPage> {
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(

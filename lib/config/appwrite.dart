@@ -27,4 +27,13 @@ class Appwrite {
   static String imageURL(String fileId) {
     return '$endpoint/storage/buckets/$bucketWorker/files/$fileId/view?project=$projectId';
   }
+
+  static Future<String> getUserId() async {
+    try {
+      final user = await account.get();
+      return user.$id;
+    } catch (e) {
+      return '';
+    }
+  }
 }

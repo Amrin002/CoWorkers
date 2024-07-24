@@ -1,4 +1,4 @@
-import 'package:coworker_mobile/cotrollers/sign_up_controller.dart';
+import 'package:coworker_mobile/controllers/sign_up_controller.dart';
 import 'package:coworker_mobile/widget/input_auth.dart';
 import 'package:coworker_mobile/widget/input_auth_password.dart';
 import 'package:coworker_mobile/widget/secondary_button.dart';
@@ -89,6 +89,12 @@ class _SignUpPageState extends State<SignUpPage> {
                   editingController: signUpController.editPassword,
                   hint: 'Tuliskan kata sandi anda',
                   title: 'Kata Sandi',
+                ),
+                DView.spaceHeight(15), // Tambahkan jarak antara kata sandi dan konfirmasi kata sandi
+                InputAuthPassword(
+                  editingController: signUpController.editConfirmPassword, // Tambahkan ini
+                  hint: 'Konfirmasi kata sandi anda', // Tambahkan ini
+                  title: 'Konfirmasi Kata Sandi', // Tambahkan ini
                 ),
                 DView.spaceHeight(30),
                 Row(

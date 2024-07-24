@@ -9,4 +9,5 @@ enum AppRoute{
   checkout,
   successBooking,
   userprofile,
+  editAccount,
 }
